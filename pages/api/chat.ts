@@ -14,5 +14,5 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  await handlers.chat(req, res);
+  handlers.chat(req, res);
 }
