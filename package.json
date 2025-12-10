@@ -9,18 +9,31 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@assistant-ui/react": "^0.11.48",
+    "@assistant-ui/react-markdown": "^0.11.6",
+    "@gram-ai/elements": "^1.1.0",
+    "ai": "^5.0.108",
+    "motion": "^12.23.26",
     "next": "16.0.8",
     "react": "19.2.1",
-    "react-dom": "19.2.1"
+    "react-dom": "19.2.1",
+    "remark-gfm": "^4.0.1",
+    "zustand": "^5.0.9"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
+    "@tailwindcss/postcss": "^4.1.17",
+    "@types/node": "^20.19.26",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.39.1",
     "eslint-config-next": "16.0.8",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "tailwindcss": "^4.1.17",
+    "typescript": "^5.9.3"
+  },
+  "packageManager": "pnpm@9.9.0+sha512.60c18acd138bff695d339be6ad13f7e936eea6745660d4cc4a776d5247c540d0edee1a563695c183a66eb917ef88f2b4feb1fc25f32a7adcadc7aaf3438e99c1",
+  "pnpm": {
+    "overrides": {
+      "@assistant-ui/tap": "0.3.1"
+    }
   }
 }
