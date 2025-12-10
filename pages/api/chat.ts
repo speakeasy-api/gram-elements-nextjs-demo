@@ -16,3 +16,4 @@ export default async function handler(
 ) {
   handlers.chat(req, res);
 }
+

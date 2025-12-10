@@ -15,6 +15,10 @@ const config: ElementsConfig = {
   modal: {
     defaultOpen: true,
   },
+  model: {
+    showModelPicker: true,
+    defaultModel: "openai/gpt-4o",
+  },
 };
 
 export default function Home() {
