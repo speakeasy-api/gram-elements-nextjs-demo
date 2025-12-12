@@ -18,11 +18,14 @@ importers:
         specifier: ^0.11.6
         version: 0.11.6(@assistant-ui/react@0.11.48(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(use-sync-external-store@1.6.0(react@19.2.1)))(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       '@gram-ai/elements':
-        specifier: 1.8.1
-        version: 1.8.1(@assistant-ui/react-markdown@0.11.6(@assistant-ui/react@0.11.48(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(use-sync-external-store@1.6.0(react@19.2.1)))(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(@assistant-ui/react@0.11.48(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(use-sync-external-store@1.6.0(react@19.2.1)))(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(motion@12.23.26(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(remark-gfm@4.0.1)(tailwindcss@4.1.17)(zustand@5.0.9(@types/react@19.2.7)(react@19.2.1)(use-sync-external-store@1.6.0(react@19.2.1)))
+        specifier: 1.8.3
+        version: 1.8.3(@assistant-ui/react-markdown@0.11.6(@assistant-ui/react@0.11.48(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(use-sync-external-store@1.6.0(react@19.2.1)))(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(@assistant-ui/react@0.11.48(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(use-sync-external-store@1.6.0(react@19.2.1)))(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(d3@7.9.0)(motion@12.23.26(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(remark-gfm@4.0.1)(tailwindcss@4.1.17)(zustand@5.0.9(@types/react@19.2.7)(react@19.2.1)(use-sync-external-store@1.6.0(react@19.2.1)))
       ai:
         specifier: ^5.0.108
         version: 5.0.108(zod@4.1.13)
+      d3:
+        specifier: ^7.9.0
+        version: 7.9.0
       motion:
         specifier: ^12.23.26
         version: 12.23.26(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
@@ -271,13 +274,14 @@ packages:
   '@floating-ui/utils@0.2.10':
     resolution: {integrity: sha512-aGTxbpbg8/b5JfU1HXSrbH3wXZuLPJcNEcZQFMxLs3oSzgtVu6nFPkbbGGUvBcUjKV2YyB9Wxxabo+HEH9tcRQ==}
 
-  '@gram-ai/elements@1.8.1':
-    resolution: {integrity: sha512-iFS3PGlgdp0Zcxv/fMWk0ftybtU88iHEJJM/kQDKhMuEXn+hEp2/koFGFHzm13IDv1tkagn4uppkhqyLKgBGYw==}
+  '@gram-ai/elements@1.8.3':
+    resolution: {integrity: sha512-UHx2SyyPWPjjmgdO9uH/iH2tfY4l8tuDBCUfx8BblvN79318Axoz+i5rA+C6eLo4cw8Np5LkeuatgOn8QGiRdg==}
     peerDependencies:
       '@assistant-ui/react': ^0.11.0
       '@assistant-ui/react-markdown': ^0.11.0
       '@types/react': '>=18 <20'
       '@types/react-dom': '>=18 <20'
+      d3: ^7.9.0
       motion: ^12.0.0
       react: '>=18 <20'
       react-dom: '>=18 <20'
@@ -291,6 +295,8 @@ packages:
       '@types/react':
         optional: true
       '@types/react-dom':
+        optional: true
+      d3:
         optional: true
       motion:
         optional: true
@@ -3326,7 +3332,7 @@ snapshots:
 
   '@floating-ui/utils@0.2.10': {}
 
-  '@gram-ai/elements@1.8.1(@assistant-ui/react-markdown@0.11.6(@assistant-ui/react@0.11.48(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(use-sync-external-store@1.6.0(react@19.2.1)))(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(@assistant-ui/react@0.11.48(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(use-sync-external-store@1.6.0(react@19.2.1)))(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(motion@12.23.26(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(remark-gfm@4.0.1)(tailwindcss@4.1.17)(zustand@5.0.9(@types/react@19.2.7)(react@19.2.1)(use-sync-external-store@1.6.0(react@19.2.1)))':
+  '@gram-ai/elements@1.8.3(@assistant-ui/react-markdown@0.11.6(@assistant-ui/react@0.11.48(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(use-sync-external-store@1.6.0(react@19.2.1)))(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(@assistant-ui/react@0.11.48(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(use-sync-external-store@1.6.0(react@19.2.1)))(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(d3@7.9.0)(motion@12.23.26(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(remark-gfm@4.0.1)(tailwindcss@4.1.17)(zustand@5.0.9(@types/react@19.2.7)(react@19.2.1)(use-sync-external-store@1.6.0(react@19.2.1)))':
     dependencies:
       '@ai-sdk/mcp': 0.0.11(zod@4.1.13)
       '@openrouter/ai-sdk-provider': 1.5.2(ai@5.0.90(zod@4.1.13))(zod@4.1.13)
@@ -3340,7 +3346,6 @@ snapshots:
       assistant-stream: 0.2.43
       class-variance-authority: 0.7.1
       clsx: 2.1.1
-      d3: 7.9.0
       lucide-react: 0.544.0(react@19.2.1)
       tailwind-merge: 3.4.0
       tw-shimmer: 0.4.0(tailwindcss@4.1.17)
@@ -3350,6 +3355,7 @@ snapshots:
       '@assistant-ui/react-markdown': 0.11.6(@assistant-ui/react@0.11.48(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(use-sync-external-store@1.6.0(react@19.2.1)))(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       '@types/react': 19.2.7
       '@types/react-dom': 19.2.3(@types/react@19.2.7)
+      d3: 7.9.0
       motion: 12.23.26(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       react: 19.2.1
       react-dom: 19.2.1(react@19.2.1)
