@@ -14,6 +14,7 @@ const config: ElementsConfig = {
   },
   modal: {
     defaultOpen: true,
+    expandable: true,
   },
   model: {
     showModelPicker: true,
