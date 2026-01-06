@@ -14,6 +14,8 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  handlers.chat(req, res);
+  await handlers.session(req, res, {
+    userIdentifier: "123",
+    embedOrigin: process.env.EMBED_ORIGIN || "",
+  });
 }
-
