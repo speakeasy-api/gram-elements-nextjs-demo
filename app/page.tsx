@@ -4,6 +4,17 @@ import "@gram-ai/elements/elements.css";
 import { recommended } from "@gram-ai/elements/plugins";
 import { fakeCustomerAndOrderData } from "./fakeData";
 
+// We require a custom session function because our session endpoint is mounted on a non-standard path
+// (e.g Elements expects /chat/session, but our session endpoint is mounted on /api/session)
+const getSession = async () => {
+  return fetch("/api/session", {
+    method: "POST",
+    headers: { "Gram-Project": "adamtest" },
+  })
+    .then((res) => res.json())
+    .then((data) => data.client_token);
+};
+
 const config: ElementsConfig = {
   projectSlug: "adamtest",
   mcp: "https://chat.speakeasy.com/mcp/speakeasy-team-my_api",
@@ -48,17 +59,14 @@ const config: ElementsConfig = {
     expandToolGroupsByDefault: true,
   },
   plugins: recommended,
+  api: {
+    sessionFn: getSession,
+  },
 };
-
-async function getSession() {
-  return fetch("/api/session", { method: "POST" })
-    .then((res) => res.json())
-    .then((data) => data.client_token);
-}
 
 export default function Home() {
   return (
-    <GramElementsProvider config={config} getSession={getSession}>
+    <GramElementsProvider config={config}>
       <Chat />
     </GramElementsProvider>
   );
