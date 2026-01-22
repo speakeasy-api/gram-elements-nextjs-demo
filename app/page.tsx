@@ -1,5 +1,10 @@
 "use client";
-import { Chat, ElementsConfig, GramElementsProvider } from "@gram-ai/elements";
+import {
+  Chat,
+  ElementsConfig,
+  GramElementsProvider,
+  ChatHistory,
+} from "@gram-ai/elements";
 import "@gram-ai/elements/elements.css";
 import { recommended } from "@gram-ai/elements/plugins";
 import { fakeCustomerAndOrderData } from "./fakeData";
@@ -26,12 +31,12 @@ const config: ElementsConfig = {
       {
         title: "Call all available tools",
         label: "Tool calling demonstration",
-        action: "Call all available tools",
+        prompt: "Call all available tools",
       },
       {
         title: "Plot customer orders by country",
         label: "Generate a chart",
-        action: `Show the following data in a bar chart by total order count for each country:\n ${JSON.stringify(
+        prompt: `Show the following data in a bar chart by total order count for each country:\n ${JSON.stringify(
           fakeCustomerAndOrderData
         )}`,
       },
@@ -43,12 +48,12 @@ const config: ElementsConfig = {
     title: "Chat with me",
     dimensions: {
       default: {
-        width: 1000,
-        height: 1000,
+        width: 800,
+        height: 700,
       },
       expanded: {
-        width: 1200,
-        height: 800,
+        width: 1000,
+        height: 900,
       },
     },
   },
@@ -57,6 +62,9 @@ const config: ElementsConfig = {
   },
   tools: {
     expandToolGroupsByDefault: true,
+
+    // nolan: change this
+    toolsRequiringApproval: () => true,
   },
   plugins: recommended,
   api: {
@@ -67,7 +75,9 @@ const config: ElementsConfig = {
 export default function Home() {
   return (
     <GramElementsProvider config={config}>
-      <Chat />
+      <div className="flex flex-row min-w-full min-h-screen justify-stretch">
+        <Chat />
+      </div>
     </GramElementsProvider>
   );
 }
