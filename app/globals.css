@@ -59,3 +59,20 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Force Gram Elements to fill container */
+.gram-elements-container,
+.gram-elements-container > div,
+[data-gram-elements],
+[data-gram-elements] > div {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Target the standalone chat variant */
+[class*="aui-root"],
+[class*="aui-thread"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 100% !important;
+}

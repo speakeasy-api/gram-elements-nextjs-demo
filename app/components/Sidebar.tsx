@@ -13,6 +13,7 @@ const mainNavItems: NavItem[] = [
   { name: "Overview", icon: "📊", href: "/" },
   { name: "Products", icon: "🍌", href: "/products" },
   { name: "Sales", icon: "💰", href: "/sales" },
+  { name: "Customers", icon: "👥", href: "/customers" },
 ];
 
 const bottomNavItems: NavItem[] = [
