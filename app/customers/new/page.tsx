@@ -3,6 +3,7 @@
 import Link from "next/link";
 import {
   Chat,
+  ChatHistory,
   ElementsConfig,
   GramElementsProvider,
 } from "@gram-ai/elements";
