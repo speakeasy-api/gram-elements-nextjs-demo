@@ -219,6 +219,75 @@ const gram = new Gram()
     },
   })
   .tool({
+    name: "onboard-customer",
+    description:
+      "Onboard a new customer with full details. This is the preferred tool for the customer onboarding flow. Required: name (string), email (string), phone (string), address (string), city (string), state (string), zip (string), country (string). Returns the created customer with a welcome message.",
+    inputSchema: {
+      name: z.string(),
+      email: z.string(),
+      phone: z.string(),
+      address: z.string(),
+      city: z.string(),
+      state: z.string(),
+      zip: z.string(),
+      country: z.string(),
+    },
+    async execute(ctx, input) {
+      const allCustomers = [...customers, ...createdCustomers];
+
+      // Validate email format
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(input.email)) {
+        return ctx.json({
+          success: false,
+          error: "Invalid email format. Please provide a valid email address."
+        });
+      }
+
+      // Check for duplicate email
+      if (allCustomers.some((c) => c.email.toLowerCase() === input.email.toLowerCase())) {
+        return ctx.json({
+          success: false,
+          error: "A customer with this email already exists in the system."
+        });
+      }
+
+      const newCustomer: Customer = {
+        id: nextCustomerId++,
+        name: input.name,
+        email: input.email,
+        phone: input.phone,
+        address: input.address,
+        city: input.city,
+        state: input.state,
+        zip: input.zip,
+        country: input.country,
+        orderCount: 0,
+      };
+
+      createdCustomers.push(newCustomer);
+
+      return ctx.json({
+        success: true,
+        message: `Customer "${newCustomer.name}" has been successfully onboarded!`,
+        customer: newCustomer,
+        summary: {
+          customerId: newCustomer.id,
+          fullName: newCustomer.name,
+          email: newCustomer.email,
+          location: `${newCustomer.city}, ${newCustomer.state}, ${newCustomer.country}`,
+          status: "Active",
+          tier: "Bronze (New Customer)",
+        },
+        nextSteps: [
+          "Customer can now place orders",
+          "Send welcome email with account details",
+          "Assign a sales representative if needed",
+        ],
+      });
+    },
+  })
+  .tool({
     name: "create-sales-report",
     description:
       "Generate a comprehensive sales report with revenue, top sellers, category breakdown, and customer data. Optional: type ('full' or 'summary'), startDate (YYYY-MM), endDate (YYYY-MM).",
