@@ -26,6 +26,9 @@ export function ChatWidget() {
     projectSlug: "nano-banana-stand",
     mcp: "https://app.getgram.ai/mcp/speakeasy-team-13kr2",
     variant: "widget",
+    history: {
+      enabled: true,
+    },
     welcome: {
       title: "nano🍌 Assistant",
       subtitle: "Ask me about products, sales, or inventory!",
