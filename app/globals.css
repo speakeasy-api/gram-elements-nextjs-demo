@@ -24,8 +24,15 @@
 }
 
 :root {
-  --background: #ffffff;
+  --background: #fefce8;
   --foreground: #171717;
+  --banana-50: #fefce8;
+  --banana-100: #fef9c3;
+  --banana-200: #fef08a;
+  --banana-300: #fde047;
+  --banana-400: #facc15;
+  --banana-500: #eab308;
+  --banana-600: #ca8a04;
 }
 
 @theme inline {
@@ -37,9 +44,14 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #1a1a1a;
     --foreground: #ededed;
   }
+}
+
+/* Banana theme utilities */
+.bg-banana-gradient {
+  background: linear-gradient(135deg, var(--banana-300) 0%, var(--banana-400) 100%);
 }
 
 body {
