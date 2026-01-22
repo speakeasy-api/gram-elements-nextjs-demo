@@ -1,0 +1,220 @@
+// Products data
+export interface Product {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  image: string;
+  category: "fresh" | "organic" | "specialty";
+  stock: number;
+}
+
+export const products: Product[] = [
+  {
+    id: "cavendish",
+    name: "Cavendish Banana",
+    description: "The classic yellow banana. Sweet, creamy, and perfect for everyday snacking.",
+    price: 0.29,
+    image: "🍌",
+    category: "fresh",
+    stock: 1250,
+  },
+  {
+    id: "red-banana",
+    name: "Red Banana",
+    description: "Sweeter and softer than yellow bananas with a hint of raspberry flavor.",
+    price: 0.89,
+    image: "🍌",
+    category: "specialty",
+    stock: 340,
+  },
+  {
+    id: "plantain",
+    name: "Plantain",
+    description: "Starchy cooking banana, perfect for frying, baking, or grilling.",
+    price: 0.59,
+    image: "🍌",
+    category: "fresh",
+    stock: 820,
+  },
+  {
+    id: "baby-banana",
+    name: "Baby Banana (Niño)",
+    description: "Mini bananas with intense sweetness. Great for kids and snacking.",
+    price: 0.49,
+    image: "🍌",
+    category: "specialty",
+    stock: 560,
+  },
+  {
+    id: "organic-cavendish",
+    name: "Organic Cavendish",
+    description: "Certified organic bananas grown without synthetic pesticides.",
+    price: 0.45,
+    image: "🍌",
+    category: "organic",
+    stock: 890,
+  },
+  {
+    id: "burro-banana",
+    name: "Burro Banana",
+    description: "Lemony tang with a creamy texture. Excellent for desserts.",
+    price: 0.69,
+    image: "🍌",
+    category: "specialty",
+    stock: 210,
+  },
+  {
+    id: "manzano",
+    name: "Manzano (Apple Banana)",
+    description: "Firm texture with apple and strawberry undertones.",
+    price: 0.79,
+    image: "🍌",
+    category: "specialty",
+    stock: 380,
+  },
+  {
+    id: "organic-plantain",
+    name: "Organic Plantain",
+    description: "Organic cooking plantains for your favorite recipes.",
+    price: 0.75,
+    image: "🍌",
+    category: "organic",
+    stock: 420,
+  },
+];
+
+// Customers data
+export interface Customer {
+  id: number;
+  name: string;
+  email: string;
+  phone: string;
+  address: string;
+  city: string;
+  state: string;
+  zip: string;
+  country: string;
+  orderCount: number;
+}
+
+export const customers: Customer[] = [
+  { id: 1, name: "John Doe", email: "john.doe@example.com", phone: "+1234567890", address: "123 Main St, Anytown, USA", city: "Anytown", state: "CA", zip: "12345", country: "USA", orderCount: 100 },
+  { id: 2, name: "Jane Smith", email: "jane.smith@example.com", phone: "+1234567891", address: "456 Oak Ave, Springfield, USA", city: "Springfield", state: "NY", zip: "54321", country: "USA", orderCount: 90 },
+  { id: 3, name: "Jim Johnson", email: "jim.johnson@example.com", phone: "+1234567892", address: "789 Elm Blvd, Riverside, USA", city: "Riverside", state: "TX", zip: "67890", country: "USA", orderCount: 80 },
+  { id: 4, name: "Jill Williams", email: "jill.williams@example.com", phone: "+1234567893", address: "321 Pine Rd, Lakeside, USA", city: "Lakeside", state: "FL", zip: "98765", country: "USA", orderCount: 70 },
+  { id: 5, name: "Jack Brown", email: "jack.brown@example.com", phone: "+1234567894", address: "654 Maple Dr, Hilltop, USA", city: "Hilltop", state: "WA", zip: "11223", country: "USA", orderCount: 60 },
+  { id: 6, name: "Sarah Davis", email: "sarah.davis@example.com", phone: "+1234567895", address: "987 Cedar Ln, Brookside, USA", city: "Brookside", state: "OR", zip: "44556", country: "USA", orderCount: 50 },
+  { id: 7, name: "Michael Miller", email: "michael.miller@example.com", phone: "+1234567896", address: "147 Birch St, Greenfield, USA", city: "Greenfield", state: "CO", zip: "77889", country: "USA", orderCount: 40 },
+  { id: 8, name: "Emily Wilson", email: "emily.wilson@example.com", phone: "+1234567897", address: "258 Spruce Way, Fairview, USA", city: "Fairview", state: "AZ", zip: "33445", country: "USA", orderCount: 30 },
+  { id: 9, name: "David Moore", email: "david.moore@example.com", phone: "+1234567898", address: "369 Willow Ct, Millbrook, USA", city: "Millbrook", state: "NV", zip: "55667", country: "USA", orderCount: 20 },
+  { id: 10, name: "Lisa Taylor", email: "lisa.taylor@example.com", phone: "+1234567899", address: "741 Ash Pl, Woodland, USA", city: "Woodland", state: "UT", zip: "88990", country: "USA", orderCount: 10 },
+  { id: 11, name: "James Anderson", email: "james.anderson@example.com", phone: "+14161234567", address: "100 Queen St, Toronto, Canada", city: "Toronto", state: "ON", zip: "M5H 2N2", country: "Canada", orderCount: 95 },
+  { id: 12, name: "Emma Thompson", email: "emma.thompson@example.com", phone: "+442071234567", address: "25 Baker Street, London, UK", city: "London", state: "England", zip: "W1U 6RX", country: "UK", orderCount: 88 },
+  { id: 13, name: "Hans Mueller", email: "hans.mueller@example.com", phone: "+49301234567", address: "Friedrichstraße 123, Berlin, Germany", city: "Berlin", state: "Berlin", zip: "10117", country: "Germany", orderCount: 82 },
+  { id: 14, name: "Sophie Dubois", email: "sophie.dubois@example.com", phone: "+33123456789", address: "15 Rue de Rivoli, Paris, France", city: "Paris", state: "Île-de-France", zip: "75001", country: "France", orderCount: 75 },
+  { id: 15, name: "Marco Rossi", email: "marco.rossi@example.com", phone: "+39061234567", address: "Via Roma 45, Rome, Italy", city: "Rome", state: "Lazio", zip: "00100", country: "Italy", orderCount: 68 },
+  { id: 16, name: "Carlos Rodriguez", email: "carlos.rodriguez@example.com", phone: "+34912345678", address: "Calle Gran Vía 10, Madrid, Spain", city: "Madrid", state: "Madrid", zip: "28013", country: "Spain", orderCount: 65 },
+  { id: 17, name: "Yuki Tanaka", email: "yuki.tanaka@example.com", phone: "+81312345678", address: "1-1-1 Shibuya, Tokyo, Japan", city: "Tokyo", state: "Tokyo", zip: "150-0002", country: "Japan", orderCount: 92 },
+  { id: 18, name: "Wei Zhang", email: "wei.zhang@example.com", phone: "+8613812345678", address: "123 Nanjing Road, Shanghai, China", city: "Shanghai", state: "Shanghai", zip: "200001", country: "China", orderCount: 85 },
+  { id: 19, name: "Priya Sharma", email: "priya.sharma@example.com", phone: "+911123456789", address: "MG Road 456, Mumbai, India", city: "Mumbai", state: "Maharashtra", zip: "400001", country: "India", orderCount: 78 },
+  { id: 20, name: "Olivia Brown", email: "olivia.brown@example.com", phone: "+61234567890", address: "100 George Street, Sydney, Australia", city: "Sydney", state: "NSW", zip: "2000", country: "Australia", orderCount: 72 },
+  { id: 21, name: "Pedro Silva", email: "pedro.silva@example.com", phone: "+5511987654321", address: "Avenida Paulista 1000, São Paulo, Brazil", city: "São Paulo", state: "SP", zip: "01310-100", country: "Brazil", orderCount: 66 },
+  { id: 22, name: "Maria Garcia", email: "maria.garcia@example.com", phone: "+525512345678", address: "Reforma 500, Mexico City, Mexico", city: "Mexico City", state: "CDMX", zip: "06600", country: "Mexico", orderCount: 58 },
+  { id: 23, name: "Lucas Martinez", email: "lucas.martinez@example.com", phone: "+541123456789", address: "Avenida 9 de Julio 100, Buenos Aires, Argentina", city: "Buenos Aires", state: "Buenos Aires", zip: "C1043", country: "Argentina", orderCount: 55 },
+  { id: 24, name: "Thabo Mbeki", email: "thabo.mbeki@example.com", phone: "+27112345678", address: "Long Street 123, Cape Town, South Africa", city: "Cape Town", state: "Western Cape", zip: "8001", country: "South Africa", orderCount: 48 },
+  { id: 25, name: "Emma van der Berg", email: "emma.vanderberg@example.com", phone: "+31201234567", address: "Damrak 1, Amsterdam, Netherlands", city: "Amsterdam", state: "North Holland", zip: "1012 LG", country: "Netherlands", orderCount: 62 },
+  { id: 26, name: "Erik Johansson", email: "erik.johansson@example.com", phone: "+46812345678", address: "Drottninggatan 50, Stockholm, Sweden", city: "Stockholm", state: "Stockholm", zip: "111 60", country: "Sweden", orderCount: 59 },
+  { id: 27, name: "Lars Hansen", email: "lars.hansen@example.com", phone: "+4512345678", address: "Strøget 1, Copenhagen, Denmark", city: "Copenhagen", state: "Capital Region", zip: "1200", country: "Denmark", orderCount: 54 },
+  { id: 28, name: "Anna Kowalski", email: "anna.kowalski@example.com", phone: "+48123456789", address: "Krakowskie Przedmieście 1, Warsaw, Poland", city: "Warsaw", state: "Mazovia", zip: "00-001", country: "Poland", orderCount: 52 },
+  { id: 29, name: "Ivan Petrov", email: "ivan.petrov@example.com", phone: "+74951234567", address: "Red Square 1, Moscow, Russia", city: "Moscow", state: "Moscow", zip: "109012", country: "Russia", orderCount: 46 },
+  { id: 30, name: "Min-jun Kim", email: "minjun.kim@example.com", phone: "+821012345678", address: "Gangnam-daero 123, Seoul, South Korea", city: "Seoul", state: "Seoul", zip: "06000", country: "South Korea", orderCount: 73 },
+  { id: 31, name: "Wei Ling Tan", email: "weiling.tan@example.com", phone: "+6512345678", address: "Orchard Road 200, Singapore", city: "Singapore", state: "Singapore", zip: "238801", country: "Singapore", orderCount: 69 },
+  { id: 32, name: "Björn Olsson", email: "bjorn.olsson@example.com", phone: "+4721234567", address: "Karl Johans gate 1, Oslo, Norway", city: "Oslo", state: "Oslo", zip: "0162", country: "Norway", orderCount: 56 },
+  { id: 33, name: "Ahmed Hassan", email: "ahmed.hassan@example.com", phone: "+201234567890", address: "Tahrir Square, Cairo, Egypt", city: "Cairo", state: "Cairo", zip: "11511", country: "Egypt", orderCount: 44 },
+  { id: 34, name: "Fatima Al-Mansouri", email: "fatima.almansouri@example.com", phone: "+971501234567", address: "Sheikh Zayed Road, Dubai, UAE", city: "Dubai", state: "Dubai", zip: "00000", country: "UAE", orderCount: 77 },
+  { id: 35, name: "Diego Fernandez", email: "diego.fernandez@example.com", phone: "+56912345678", address: "Avenida Providencia 123, Santiago, Chile", city: "Santiago", state: "Santiago", zip: "7500000", country: "Chile", orderCount: 51 },
+];
+
+// Sales data - pre-computed for simplicity
+const salesMultipliers: Record<string, number> = {
+  cavendish: 5.0,
+  "organic-cavendish": 3.2,
+  plantain: 2.8,
+  "baby-banana": 2.0,
+  "red-banana": 1.2,
+  manzano: 1.5,
+  "burro-banana": 0.8,
+  "organic-plantain": 1.8,
+};
+
+export interface ProductSales {
+  productId: string;
+  totalQuantity: number;
+  totalRevenue: number;
+}
+
+export function getProductSales(): ProductSales[] {
+  // Simulated 6-month sales data
+  return products.map((product) => {
+    const multiplier = salesMultipliers[product.id] || 1.0;
+    const baseQuantity = 180 * 35; // ~180 days * base daily sales
+    const totalQuantity = Math.floor(baseQuantity * multiplier);
+    const totalRevenue = Math.round(totalQuantity * product.price * 100) / 100;
+    return { productId: product.id, totalQuantity, totalRevenue };
+  });
+}
+
+export function getProductWithSales() {
+  const sales = getProductSales();
+  return products.map((product) => {
+    const productSales = sales.find((s) => s.productId === product.id) || {
+      productId: product.id,
+      totalQuantity: 0,
+      totalRevenue: 0,
+    };
+    return { ...product, ...productSales };
+  });
+}
+
+export interface MonthlySales {
+  month: string;
+  revenue: number;
+  quantity: number;
+}
+
+export function getMonthlySales(): MonthlySales[] {
+  const months = ["2025-07", "2025-08", "2025-09", "2025-10", "2025-11", "2025-12"];
+  return months.map((month, i) => ({
+    month,
+    revenue: Math.round((8000 + Math.random() * 4000 + i * 500) * 100) / 100,
+    quantity: Math.floor(15000 + Math.random() * 8000 + i * 1000),
+  }));
+}
+
+export function getTotalStats() {
+  const productSales = getProductSales();
+  const totalRevenue = productSales.reduce((sum, p) => sum + p.totalRevenue, 0);
+  const totalQuantity = productSales.reduce((sum, p) => sum + p.totalQuantity, 0);
+
+  return {
+    totalRevenue: Math.round(totalRevenue * 100) / 100,
+    totalQuantity,
+    activeProducts: products.length,
+    avgOrderValue: Math.round((totalRevenue / totalQuantity) * 100) / 100,
+  };
+}
+
+export function getCustomersByCountry() {
+  const byCountry: Record<string, { country: string; totalOrders: number; customerCount: number }> = {};
+  for (const customer of customers) {
+    const country = customer.country;
+    if (!byCountry[country]) {
+      byCountry[country] = { country, totalOrders: 0, customerCount: 0 };
+    }
+    const entry = byCountry[country]!;
+    entry.totalOrders += customer.orderCount;
+    entry.customerCount += 1;
+  }
+  return Object.values(byCountry).sort((a, b) => b.totalOrders - a.totalOrders);
+}
